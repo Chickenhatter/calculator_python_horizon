@@ -42,6 +42,68 @@ if choice == 'M':
     elements = {}
     the_element = input('Element?')
 
+    # Will be for Crystilsed water
+    call = False
+    start = False
+    thing = 0
+    lend = False
+    for different in the_element:
+        if different == ".":
+            start = thing
+            call = True
+        thing += 1
+    if call == True:
+        lend = (the_element[(start):(len(the_element))])
+        print(the_element)
+        the_element = the_element.replace(lend,"")
+        print(the_element)
+        place = 0
+        time = int(lend[1])
+        lend = lend[2:]
+        while lend != '':
+            element = element_symbols[place]
+            try:
+                a = element[1]
+                a = 2
+                kilt = 0
+                filt = 1
+            except:
+                a = 1
+                kilt = 0
+                filt = 0
+            v = 0
+            while v < len(lend) +kilt:
+                if (lend[v:v+a]) == element:
+                    lend = lend[:(v)] + lend[(v+kilt):]
+                    try:
+                        if (lend[(v+1+filt)]).isdigit():
+                            if element in elements:
+                                elements[element] += int((lend[(v+1+filt)]))*time
+                            else:
+                                elements[element] = int((lend[(v+1+filt)]))*time
+                            lend = lend[:(v+1-filt)] + lend[(v+2+filt):]
+                        else:
+                            if element in elements:
+                                elements[element] += time
+                            else:
+                                elements[element] = time
+                    except:
+                        if element in elements:
+                            elements[element] += time
+                        else:
+                            elements[element] = time
+                v += 1
+            place += 1
+            lend = lend.replace(element,'')
+
+
+
+
+
+
+
+
+
     # Remove the bracket thingy
     place = 0
     v = 0
