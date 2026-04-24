@@ -35,8 +35,8 @@ element_symbols = [
     "H","B","C","N","O","F","P","S","K","V","Y","I","W","U"
 ]
 #Anything made above this line is Ai because I cannot be bothered to make the lists
-print('Do you want to find molar mass of element(M) or do you want to find all info from CVmMn(K)')
-choice = input('M/K: ')
+print('Do you want to find molar mass of element(M) or do you want to find all info from CVmMn(K) or do you want to find all info from Mecanics(P)')
+choice = input('M/K/P: ')
 if choice == 'M':
     elements = {}
     the_element = input('Element?')
@@ -222,18 +222,69 @@ elif choice == 'K':
         if i == 'V':
             V = True
     if M == True:
-        M = input('Molar Mass: ')
+        M = int(input('Molar Mass(moLg-1): '))
     if m == True:
-        m = input('Mass: ')
+        m = int(input('Mass(g): '))
     if n == True:
-        n = input('Mol: ')
+        n = int(input('Mol: '))
     if C == True:
-        C = input('Concentration: ')
+        C = int(input('Concentration(molL-1): '))
     if V == True:
-        V = input('Volume: ')
+        V = int(input('Volume(L): '))
     x = 0
     while x < 6:
-        if (M.isdigit()):
-            print('q')
+        if (M != False) and (m != False):
+            n = m/M
+        if (n != False) and (m != False):
+            M = m/n
+        if (M != False) and (n != False):
+            m = n*M
+        if (C != False) and (n != False):
+            V = n/C
+        if (V != False) and (n != False):
+            C = n/V
+        if (C != False) and (V != False):
+            n = V*C
         x += 1
-        print('v')
+    print(M,'g mol -1')
+    print(m, 'g')
+    print(n,'mol')
+    print(C,'mol L -1')
+    print(V,'L')
+elif choice == 'P':
+    print('Please give all letters for chem you know')
+    commands = input('All of them: ')
+    d = False
+    v = False
+    t = False
+    a = False
+    m = False
+    F = False
+    A = False
+    P = False
+    for i in commands:
+        if i == 'd':
+            d = int(input('Distance(m): '))
+        if i == 'v':
+            v = int(input('Velocity(ms-1): '))
+        if i == 't':
+            t = int(input('Time(s): '))
+        if i == 'a':
+            a = int(input('Acceleration(ms-2): '))
+        if i == 'm':
+            m = int(input('Weight(kg): '))
+        if i == 'F':
+            F = int(input('Force(N): '))
+        if i == 'A':
+            A = int(input('Area(m -2): '))
+        if i == 'P':
+            P = int(input('Pressure(N m -2): '))
+    x = 0
+    while x < 6:
+        if (d != False) and (v != False):
+            t = d/v
+        if (d != False) and (t != False):
+            v = d/t
+        if (t != False) and (v != False):
+            d = v*t
+        x += 1
