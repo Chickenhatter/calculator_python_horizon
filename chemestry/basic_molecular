@@ -35,9 +35,8 @@ element_symbols = [
     "H","B","C","N","O","F","P","S","K","V","Y","I","W","U"
 ]
 #Anything made above this line is Ai because I cannot be bothered to make the lists
-import re
 print('Do you want to find molar mass of element(M) or do you want to find all info from CVmMn(K)')
-choice = input('M/K')
+choice = input('M/K: ')
 if choice == 'M':
     elements = {}
     the_element = input('Element?')
@@ -95,13 +94,6 @@ if choice == 'M':
                 v += 1
             place += 1
             lend = lend.replace(element,'')
-
-
-
-
-
-
-
 
 
     # Remove the bracket thingy
@@ -200,6 +192,48 @@ if choice == 'M':
                 v += 1
             place += 1
             the_element = the_element.replace(element,'')
+    print('This is just a list of all elements and how common they appear if you need it')
     print(elements)
+    print('The Molar Mass g mol-1 is this much')
+    final_mass = 0
+    for lalas in elements:
+        if lalas in elements_dictionary:
+            v1 = elements_dictionary[lalas] 
+            v2 = elements[lalas] 
+            final_mass += (v1*v2)
+    print(final_mass)
 elif choice == 'K':
-    pass
+    print('Please give all letters for chem you know')
+    commands = input('All of them: ')
+    M = False
+    m = False
+    n = False
+    C = False
+    V = False
+    for i in commands:
+        if i == 'M':
+            M = True
+        if i == 'm':
+            m = True
+        if i == 'n':
+            n = True
+        if i == 'C':
+            C = True
+        if i == 'V':
+            V = True
+    if M == True:
+        M = input('Molar Mass: ')
+    if m == True:
+        m = input('Mass: ')
+    if n == True:
+        n = input('Mol: ')
+    if C == True:
+        C = input('Concentration: ')
+    if V == True:
+        V = input('Volume: ')
+    x = 0
+    while x < 6:
+        if (M.isdigit()):
+            print('q')
+        x += 1
+        print('v')
