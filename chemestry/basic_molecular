@@ -41,33 +41,103 @@ choice = input('M/K')
 if choice == 'M':
     elements = {}
     the_element = input('Element?')
+
+    # Remove the bracket thingy
+    place = 0
+    v = 0
+    start = 0
+    thing = 0
+    end = []
+    for different in the_element:
+        if different == '(':
+            start = thing
+        if different == ')':
+            end.append(the_element[(start):(thing+2)])
+        thing += 1
+    for lolak in end:
+        the_element = the_element.replace(lolak,"")
+    for lolack in end:
+        place = 0
+        time = int(lolak[-1])
+        lolack = lolack[:-2]
+        lolack = lolack[1:]
+        while lolack != '':
+            element = element_symbols[place]
+            try:
+                a = element[1]
+                a = 2
+                kilt = 0
+                filt = 1
+            except:
+                a = 1
+                kilt = 0
+                filt = 0
+            v = 0
+            while v < len(lolack) +kilt:
+                if (lolack[v:v+a]) == element:
+                    lolack = lolack[:(v)] + lolack[(v+kilt):]
+                    try:
+                        if (lolack[(v+1+filt)]).isdigit():
+                            if element in elements:
+                                elements[element] += int((lolack[(v+1+filt)]))*time
+                            else:
+                                elements[element] = int((lolack[(v+1+filt)]))*time
+                            lolack = lolack[:(v+1-filt)] + lolack[(v+2+filt):]
+                        else:
+                            if element in elements:
+                                elements[element] += time
+                            else:
+                                elements[element] = time
+                    except:
+                        if element in elements:
+                            elements[element] += time
+                        else:
+                            elements[element] = time
+                v += 1
+            place += 1
+            lolack = lolack.replace(element,'')
+
+
+
+
+
+    # Remove everything else
     place = 0
     while the_element != '':
-        element = element_symbols[place]
-        print(the_element)
-        try:
-            a = element[1]
-            a = 2
-        except:
-            a = 0
-        v = 0
-        while v < len(the_element) - 1:
-            if (the_element[v:v+a]) == element:
-                the_element = the_element[:(v)] + the_element[(v+a):]
-                print((the_element[(v)]).isdigit())
-                if (the_element[(v)]).isdigit():
-                    if element in elements:
-                        elements[element] += int((the_element[(v)]))
-                    else:
-                        elements[element] = int((the_element[(v)]))
-                    the_element = the_element[:(v)] + the_element[(v+1):]
-                else:
-                    if element in elements:
-                        elements[element] += 1
-                    else:
-                        elements[element] = 1
-            v += 1
-        place += 1
+            element = element_symbols[place]
+            try:
+                a = element[1]
+                a = 2
+                kilt = 0
+                filt = 1
+            except:
+                a = 1
+                kilt = 0
+                filt = 0
+            v = 0
+            while v < len(the_element) +kilt:
+                if (the_element[v:v+a]) == element:
+                    the_element = the_element[:(v)] + the_element[(v+kilt):]
+                    try:
+                        if (the_element[(v+1+filt)]).isdigit():
+                            if element in elements:
+                                elements[element] += int((the_element[(v+1+filt)]))
+                            else:
+                                elements[element] = int((the_element[(v+1+filt)]))
+                            the_element = the_element[:(v+1-filt)] + the_element[(v+2+filt):]
+                        else:
+                            if element in elements:
+                                elements[element] += 1
+                            else:
+                                elements[element] = 1
+                    except:
+                        if element in elements:
+                            elements[element] += 1
+                        else:
+                            elements[element] = 1
+                v += 1
+            place += 1
+            the_element = the_element.replace(element,'')
     print(elements)
 elif choice == 'K':
     pass
