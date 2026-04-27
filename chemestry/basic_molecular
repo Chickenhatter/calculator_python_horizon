@@ -252,8 +252,8 @@ elif choice == 'K':
     print(C,'mol L -1')
     print(V,'L')
 elif choice == 'P':
-    print('Please give all letters for chem you know')
-    commands = input('All of them: ')
+    print('Please give all letters for factors you know')
+    commands = input('All of them(dvtamFAP): ')
     d = False
     v = False
     t = False
@@ -287,4 +287,34 @@ elif choice == 'P':
             v = d/t
         if (t != False) and (v != False):
             d = v*t
+        
+        if (v != False) and (a != False):
+            t = v/a
+        if (v != False) and (t != False):
+            a = v/t
+        if (t != False) and (a != False):
+            v = a*t
+        
+        if (F != False) and (a != False):
+            m = F/a
+        if (F != False) and (m != False):
+            a = F/m
+        if (a != False) and (m != False):
+            F = a*m
+        
+        if (F != False) and (P != False):
+            A = F/P
+        if (F != False) and (A != False):
+            P = F/A
+        if (P != False) and (A != False):
+            F = P*A
         x += 1
+    print('This all results in')
+    print(d,'m')
+    print(v,'m s -1')
+    print(t,'s')
+    print(a,'m s -2')
+    print(m,'kg')
+    print(F,'N')
+    print(A,'m -2')
+    print(P,'P(N m -2)')
