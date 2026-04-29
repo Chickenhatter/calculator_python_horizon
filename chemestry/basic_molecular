@@ -36,7 +36,7 @@ element_symbols = [
 ]
 #Anything made above this line is Ai because I cannot be bothered to make the lists
 print('Do you want to find molar mass of element(M) or do you want to find all info from CVmMn(K) or do you want to find all info from Mecanics(P)')
-choice = input('M/K/P: ')
+choice = input('M/K: ')
 if choice == 'M':
     elements = {}
     the_element = input('Element?')
@@ -203,7 +203,7 @@ if choice == 'M':
             final_mass += (v1*v2)
     print(final_mass)
 elif choice == 'K':
-    print('Please give all letters for chem you know')
+    print('(MmnCV)Please give all letters for chem you know')
     commands = input('All of them: ')
     M = False
     m = False
@@ -252,8 +252,8 @@ elif choice == 'K':
     print(C,'mol L -1')
     print(V,'L')
 elif choice == 'P':
-    print('Please give all letters for factors you know')
-    commands = input('All of them(dvtamFAP): ')
+    print('(dvtamFAP)Please give all letters for factors you know')
+    commands = input('All of them: ')
     d = False
     v = False
     t = False
