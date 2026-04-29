@@ -77,11 +77,41 @@ elif choice == 'F':
     v = False
     for i in commands:
         if i == 'p':
-
+            p = int(input('Gravitational Potential Enegry(J): '))
         if i == 'k':
-
+            k = int(input('Kinetic Enegry(J): '))
         if i == 'm':
+            m = int(input('Mass(Kg): '))
+        if i == 'g':
+            g = int(input('Gravity(10 N Kg): '))
+        if i == 'h':
+            h = int(input('Height(m): '))
+        if i == 'v':
+            v = int(input('Velocity(ms-1): '))
+    l = 2
+    while l != 0:
+        if (p != False) and (m != False) and (g != False):
+            h = (p)/(m*g)
+        if (p != False) and (h != False) and (g != False):
+            m = (p)/(h*g)
+        if (p != False) and (m != False) and (h != False):
+            g = (p)/(m*h)
+        if (h != False) and (m != False) and (g != False):
+            p = (h*m*g)
 
-
+        if (k != False) and (m != False):
+            v = ((2*k)/m) ** (0.5)
+        if (k != False) and (v != False):
+            m = ((2*(k))/(v*v))
+        if (v != False) and (m != False):
+            k = (0.5)*(v*v)*(m)
+        l -= 1
+        print('a')
     print('This all results in')
+    print(p)
+    print(k)
+    print(m)
+    print(g)
+    print(h)
+    print(v)
     
