@@ -1,43 +1,41 @@
 elements_dictionary = {
-    "H": 1.0, "He": 4.0,
-    "Li": 6.9, "Be": 9.0, "B": 10.8, "C": 12.0, "N": 14.0, "O": 16.0, "F": 19.0, "Ne": 20.2,
-    "Na": 23.0, "Mg": 24.3, "Al": 27.0, "Si": 28.1, "P": 31.0, "S": 32.1, "Cl": 35.5, "Ar": 40.0,
-    "K": 39.1, "Ca": 40.1, "Sc": 45.0, "Ti": 47.9, "V": 50.9, "Cr": 52.0, "Mn": 54.9, "Fe": 55.9,
-    "Co": 58.9, "Ni": 58.7, "Cu": 63.6, "Zn": 65.4, "Ga": 69.7, "Ge": 72.6, "As": 74.9, "Se": 79.0,
-    "Br": 79.9, "Kr": 83.8,
-    "Rb": 85.5, "Sr": 87.6, "Y": 88.9, "Zr": 91.2, "Nb": 92.9, "Mo": 95.9, "Tc": 98.9, "Ru": 101,
-    "Rh": 103, "Pd": 106, "Ag": 108, "Cd": 112, "In": 115, "Sn": 119, "Sb": 122,
-    "Te": 128, "I": 127, "Xe": 131,
-    "Cs": 133, "Ba": 137, "La": 139, "Ce": 140, "Pr": 141, "Nd": 144, "Pm": 147,
-    "Sm": 150, "Eu": 152, "Gd": 157, "Tb": 159, "Dy": 163, "Ho": 165, "Er": 167,
-    "Tm": 169, "Yb": 173, "Lu": 175.0,
-    "Hf": 179, "Ta": 181, "W": 184, "Re": 186, "Os": 190, "Ir": 192, "Pt": 195,
-    "Au": 197, "Hg": 201, "Tl": 204, "Pb": 207, "Bi": 209, "Po": 210, "At": 210,
-    "Rn": 222,
-    "Fr": 223, "Ra": 226, "Ac": 227.0, "Th": 232.0, "Pa": 231.0, "U": 238.0, "Np": 237.0,
-    "Pu": 239, "Am": 241, "Cm": 244, "Bk": 249, "Cf": 251.0, "Es": 252.0, "Fm": 257.0,
-    "Md": 258.0, "No": 259.0, "Lr": 262.0,
-    "Rf": 261.0, "Db": 262.0, "Sg": 263.0, "Bh": 264.0, "Hs": 265.0, "Mt": 268.0, "Ds": 271.0,
-    "Rg": 272.0, "Cn": 277.0,
-    #For some reason my National school system still have no mass for the following
-    "Nh": 286.0, "Fl": 289.0, "Mc": 290.0, "Lv": 293.0, "Ts": 294.0,
-    "Og": 294.0
+    "h": 1.0, "hE": 4.0,
+    "lI": 6.9, "bE": 9.0, "b": 10.8, "c": 12.0, "n": 14.0, "o": 16.0, "f": 19.0, "nE": 20.2,
+    "nA": 23.0, "mG": 24.3, "aL": 27.0, "sI": 28.1, "p": 31.0, "s": 32.1, "cL": 35.5, "aR": 40.0,
+    "k": 39.1, "cA": 40.1, "sC": 45.0, "tI": 47.9, "v": 50.9, "cR": 52.0, "mN": 54.9, "fE": 55.9,
+    "cO": 58.9, "nI": 58.7, "cU": 63.6, "zN": 65.4, "gA": 69.7, "gE": 72.6, "aS": 74.9, "sE": 79.0,
+    "bR": 79.9, "kR": 83.8,
+    "rB": 85.5, "sR": 87.6, "y": 88.9, "zR": 91.2, "nB": 92.9, "mO": 95.9, "tC": 98.9, "rU": 101,
+    "rH": 103, "pD": 106, "aG": 108, "cD": 112, "iN": 115, "sN": 119, "sB": 122,
+    "tE": 128, "i": 127, "xE": 131,
+    "cS": 133, "bA": 137, "lA": 139, "cE": 140, "pR": 141, "nD": 144, "pM": 147,
+    "sM": 150, "eU": 152, "gD": 157, "tB": 159, "dY": 163, "hO": 165, "eR": 167,
+    "tM": 169, "yB": 173, "lU": 175.0,
+    "hF": 179, "tA": 181, "w": 184, "rE": 186, "oS": 190, "iR": 192, "pT": 195,
+    "aU": 197, "hG": 201, "tL": 204, "pB": 207, "bI": 209, "pO": 210, "aT": 210,
+    "rN": 222,
+    "fR": 223, "rA": 226, "aC": 227.0, "tH": 232.0, "pA": 231.0, "u": 238.0, "nP": 237.0,
+    "pU": 239, "aM": 241, "cM": 244, "bK": 249, "cF": 251.0, "eS": 252.0, "fM": 257.0,
+    "mD": 258.0, "nO": 259.0, "lR": 262.0,
+    "rF": 261.0, "dB": 262.0, "sG": 263.0, "bH": 264.0, "hS": 265.0, "mT": 268.0, "dS": 271.0,
+    "rG": 272.0, "cN": 277.0,
+    "nH": 286.0, "fL": 289.0, "mC": 290.0, "lV": 293.0, "tS": 294.0,
+    "oG": 294.0
 }
 
 element_symbols = [
-    "He","Li","Be","Ne","Na","Mg","Al","Si","Cl","Ar","Ca","Sc","Ti","Cr","Mn","Fe","Co","Ni","Cu","Zn",
-    "Ga","Ge","As","Se","Br","Kr","Rb","Sr","Zr","Nb","Mo","Tc","Ru","Rh","Pd","Ag","Cd","In","Sn","Sb",
-    "Te","Xe","Cs","Ba","La","Ce","Pr","Nd","Pm","Sm","Eu","Gd","Tb","Dy","Ho","Er","Tm","Yb","Lu",
-    "Hf","Ta","Re","Os","Ir","Pt","Au","Hg","Tl","Pb","Bi","Po","At","Rn","Fr","Ra","Ac","Th","Pa","Np",
-    "Pu","Am","Cm","Bk","Cf","Es","Fm","Md","No","Lr","Rf","Db","Sg","Bh","Hs","Mt","Ds","Rg","Cn","Nh",
-    "Fl","Mc","Lv","Ts","Og",
-    "H","B","C","N","O","F","P","S","K","V","Y","I","W","U"
+    "hE","lI","bE","nE","nA","mG","aL","sI","cL","aR","cA","sC","tI","cR","mN","fE","cO","nI","cU","zN",
+    "gA","gE","aS","sE","bR","kR","rB","sR","zR","nB","mO","tC","rU","rH","pD","aG","cD","iN","sN","sB",
+    "tE","xE","cS","bA","lA","cE","pR","nD","pM","sM","eU","gD","tB","dY","hO","eR","tM","yB","lU",
+    "hF","tA","rE","oS","iR","pT","aU","hG","tL","pB","bI","pO","aT","rN","fR","rA","aC","tH","pA","nP",
+    "pU","aM","cM","bK","cF","eS","fM","mD","nO","lR","rF","dB","sG","bH","hS","mT","dS","rG","cN","nH",
+    "fL","mC","lV","tS","oG",
+    "h","b","c","n","o","f","p","s","k","v","y","i","w","u"
 ]
-#Anything made above this line is Ai because I cannot be bothered to make the lists
 print('Do you want to find molar mass of element(M) or do you want to find all info from CVmMn(K) or do you want to find all info from Mecanics(P)')
-choice = input('M/K: ')
+choice = input('m/k: ')
 try:
-    if choice == 'M':
+    if choice == 'm':
         elements = {}
         the_element = input('Element?')
 
@@ -202,7 +200,7 @@ try:
                 v2 = elements[lalas] 
                 final_mass += (v1*v2)
         print(final_mass)
-    elif choice == 'K':
+    elif choice == 'k':
         print('(MmnCV)Please give all letters for chem you know')
         commands = input('All of them: ')
         M = False

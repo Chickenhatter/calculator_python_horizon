@@ -13,5 +13,5 @@ while d != '0':
         else:
             print('No True')
     except:
-        print('')
+        print("Didn't give a number")
     d = input('cont ! 0')

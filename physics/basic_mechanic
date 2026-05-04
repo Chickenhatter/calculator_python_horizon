@@ -1,5 +1,5 @@
-choice = input('M/F')
-if choice == 'M':
+choice = input('m/f')
+if choice == 'm':
     print('(dvtamFAPWp)Please give all letters for factors you know')
     commands = input('All of them: ')
     d = False
@@ -88,7 +88,7 @@ if choice == 'M':
     print(P,'P(N m -2)')
     print(W, 'J')
     print(p,'Watts')
-elif choice == 'F':
+elif choice == 'f':
     print('(pkmghv)Please give all letters for factors you know')
     commands = input('All of them: ')
     p = False
