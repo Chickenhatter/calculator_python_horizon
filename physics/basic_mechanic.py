@@ -14,67 +14,67 @@ if choice == 'm':
     p = False #Power
     for i in commands:
         if i == 'd':
-            d = int(input('Distance(m): '))
+            d = float(input('Distance(m): '))
         if i == 'v':
-            v = int(input('Velocity(ms-1): '))
+            v = float(input('Velocity(ms-1): '))
         if i == 't':
-            t = int(input('Time(s): '))
+            t = float(input('Time(s): '))
         if i == 'a':
-            a = int(input('Acceleration(ms-2): '))
+            a = float(input('Acceleration(ms-2): '))
         if i == 'm':
-            m = int(input('Weight(kg): '))
+            m = float(input('Mass(kg): '))
         if i == 'F':
-            F = int(input('Force(N): '))
+            F = float(input('Force(N): '))
         if i == 'A':
-            A = int(input('Area(m -2): '))
+            A = float(input('Area(m -2): '))
         if i == 'P':
-            P = int(input('Pressure(N m -2): '))
+            P = float(input('Pressure(N m -2): '))
         if i == 'W':
-            W = int(input('Work(J): '))
+            W = float(input('Work(J): '))
         if i == 'p':
-            p = int(input('Power(Watts): '))
+            p = float(input('Power(Watts): '))
     x = 0
     while x < 6:
-        if (d != False) and (v != False):
+        if (d != False) and (v != False) and (t == False):
             t = d/v
-        if (d != False) and (t != False):
+        if (d != False) and (t != False) and (v == False):
             v = d/t
-        if (t != False) and (v != False):
+        if (t != False) and (v != False) and (d == False):
             d = v*t
         
-        if (v != False) and (a != False):
+        if (v != False) and (a != False) and (t == False):
             t = v/a
-        if (v != False) and (t != False):
+        if (v != False) and (t != False) and (a == False):
             a = v/t
-        if (t != False) and (a != False):
+        if (t != False) and (a != False) and (v == False):
             v = a*t
         
-        if (F != False) and (a != False):
+        if (F != False) and (a != False) and (m == False):
             m = F/a
-        if (F != False) and (m != False):
+        if (F != False) and (m != False) and (a == False):
             a = F/m
-        if (a != False) and (m != False):
+        if (a != False) and (m != False) and (F == False):
             F = a*m
         
-        if (F != False) and (P != False):
+        if (F != False) and (P != False) and (A == False):
             A = F/P
-        if (F != False) and (A != False):
+        if (F != False) and (A != False) and (P == False):
             P = F/A
-        if (P != False) and (A != False):
+        if (P != False) and (A != False) and (F == False):
             F = P*A
 
-        if (F != False) and (W != False):
+        if (F != False) and (W != False) and (d == False):
             d = W/F
-        if (W != False) and (d != False):
+        if (W != False) and (d != False) and (F == False):
             F = W/d
-        if (F != False) and (d != False):
+        if (F != False) and (d != False) and (W == False):
             W = F*d
 
-        if (t != False) and (W != False):
+        if (t != False) and (W != False) and (p == False):
             p = W/t
-        if (W != False) and (p != False):
+        if (W != False) and (p != False) and (t == False):
             t = W/p
-        if (p != False) and (t != False):
+        if (p != False) and (t != False) and (W == False):
             W = p*t
         x += 1
     print('This all results in')
@@ -99,40 +99,40 @@ elif choice == 'f':
     v = False
     for i in commands:
         if i == 'p':
-            p = int(input('Gravitational Potential Enegry(J): '))
+            p = float(input('Gravitational Potential Enegry(J): '))
         if i == 'k':
-            k = int(input('Kinetic Enegry(J): '))
+            k = float(input('Kinetic Enegry(J): '))
         if i == 'm':
-            m = int(input('Mass(Kg): '))
+            m = float(input('Mass(Kg): '))
         if i == 'g':
-            g = int(input('Gravity(N Kg): '))
+            g = float(input('Gravity(N Kg): '))
         if i == 'h':
-            h = int(input('Height(m): '))
+            h = float(input('Height(m): '))
         if i == 'v':
-            v = int(input('Velocity(ms-1): '))
+            v = float(input('Velocity(ms-1): '))
     l = 2
     while l != 0:
-        if (p != False) and (m != False) and (g != False):
+        if (p != False) and (m != False) and (g != False) and (h == False):
             h = (p)/(m*g)
-        if (p != False) and (h != False) and (g != False):
+        if (p != False) and (h != False) and (g != False) and (p == False):
             m = (p)/(h*g)
-        if (p != False) and (m != False) and (h != False):
+        if (p != False) and (m != False) and (h != False) and (g == False):
             g = (p)/(m*h)
-        if (h != False) and (m != False) and (g != False):
+        if (h != False) and (m != False) and (g != False) and (p == False):
             p = (h*m*g)
 
-        if (k != False) and (m != False):
+        if (k != False) and (m != False) and (k == False):
             v = ((2*k)/m) ** (0.5)
-        if (k != False) and (v != False):
+        if (k != False) and (v != False) and (m == False):
             m = ((2*(k))/(v*v))
-        if (v != False) and (m != False):
+        if (v != False) and (m != False) and (k == False):
             k = (0.5)*(v*v)*(m)
         l -= 1
         print('a')
     print('This all results in')
     print(p,'potential gravity(J)')
     print(k,'kinetic J')
-    print(m,'mass(Kg)')
+    print(m,'Mass(Kg)')
     print(g,'N Kg')
     print(h,'m')
     print(v,'m s-1')

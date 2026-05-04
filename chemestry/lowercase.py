@@ -34,7 +34,7 @@ element_symbols = [
 ]
 print('Do you want to find molar mass of element(M) or do you want to find all info from CVmMn(K) or do you want to find all info from Mecanics(P)')
 choice = input('m/k: ')
-try:
+if 1 == 1:
     if choice == 'm':
         elements = {}
         the_element = input('Element?')
@@ -220,15 +220,15 @@ try:
             if i == 'V':
                 V = True
         if M == True:
-            M = int(input('Molar Mass(moLg-1): '))
+            M = float(input('Molar Mass(moLg-1): '))
         if m == True:
-            m = int(input('Mass(g): '))
+            m = float(input('Mass(g): '))
         if n == True:
-            n = int(input('Mol: '))
+            n = float(input('Mol: '))
         if C == True:
-            C = int(input('Concentration(molL-1): '))
+            C = float(input('Concentration(molL-1): '))
         if V == True:
-            V = int(input('Volume(L): '))
+            V = float(input('Volume(L): '))
         x = 0
         while x < 6:
             if (M != False) and (m != False):
@@ -249,72 +249,3 @@ try:
         print(n,'mol')
         print(C,'mol L -1')
         print(V,'L')
-    elif choice == 'P':
-        print('(dvtamFAP)Please give all letters for factors you know')
-        commands = input('All of them: ')
-        d = False
-        v = False
-        t = False
-        a = False
-        m = False
-        F = False
-        A = False
-        P = False
-        for i in commands:
-            if i == 'd':
-                d = int(input('Distance(m): '))
-            if i == 'v':
-                v = int(input('Velocity(ms-1): '))
-            if i == 't':
-                t = int(input('Time(s): '))
-            if i == 'a':
-                a = int(input('Acceleration(ms-2): '))
-            if i == 'm':
-                m = int(input('Weight(kg): '))
-            if i == 'F':
-                F = int(input('Force(N): '))
-            if i == 'A':
-                A = int(input('Area(m -2): '))
-            if i == 'P':
-                P = int(input('Pressure(N m -2): '))
-        x = 0
-        while x < 6:
-            if (d != False) and (v != False):
-                t = d/v
-            if (d != False) and (t != False):
-                v = d/t
-            if (t != False) and (v != False):
-                d = v*t
-            
-            if (v != False) and (a != False):
-                t = v/a
-            if (v != False) and (t != False):
-                a = v/t
-            if (t != False) and (a != False):
-                v = a*t
-            
-            if (F != False) and (a != False):
-                m = F/a
-            if (F != False) and (m != False):
-                a = F/m
-            if (a != False) and (m != False):
-                F = a*m
-            
-            if (F != False) and (P != False):
-                A = F/P
-            if (F != False) and (A != False):
-                P = F/A
-            if (P != False) and (A != False):
-                F = P*A
-            x += 1
-        print('This all results in')
-        print(d,'m')
-        print(v,'m s -1')
-        print(t,'s')
-        print(a,'m s -2')
-        print(m,'kg')
-        print(F,'N')
-        print(A,'m -2')
-        print(P,'P(N m -2)')
-except:
-    print('There would have been something that went wrong')
