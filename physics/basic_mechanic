@@ -1,6 +1,6 @@
 choice = input('M/F')
 if choice == 'M':
-    print('(dvtamFAP)Please give all letters for factors you know')
+    print('(dvtamFAPWp)Please give all letters for factors you know')
     commands = input('All of them: ')
     d = False
     v = False
@@ -10,6 +10,8 @@ if choice == 'M':
     F = False
     A = False
     P = False
+    W = False
+    p = False #Power
     for i in commands:
         if i == 'd':
             d = int(input('Distance(m): '))
@@ -27,6 +29,10 @@ if choice == 'M':
             A = int(input('Area(m -2): '))
         if i == 'P':
             P = int(input('Pressure(N m -2): '))
+        if i == 'W':
+            W = int(input('Work(J): '))
+        if i == 'p':
+            p = int(input('Power(Watts): '))
     x = 0
     while x < 6:
         if (d != False) and (v != False):
@@ -56,6 +62,20 @@ if choice == 'M':
             P = F/A
         if (P != False) and (A != False):
             F = P*A
+
+        if (F != False) and (W != False):
+            d = W/F
+        if (W != False) and (d != False):
+            F = W/d
+        if (F != False) and (d != False):
+            W = F*d
+
+        if (t != False) and (W != False):
+            p = W/t
+        if (W != False) and (p != False):
+            t = W/p
+        if (p != False) and (t != False):
+            W = p*t
         x += 1
     print('This all results in')
     print(d,'m')
@@ -66,6 +86,8 @@ if choice == 'M':
     print(F,'N')
     print(A,'m -2')
     print(P,'P(N m -2)')
+    print(W, 'J')
+    print(p,'Watts')
 elif choice == 'F':
     print('(pkmghv)Please give all letters for factors you know')
     commands = input('All of them: ')
@@ -83,7 +105,7 @@ elif choice == 'F':
         if i == 'm':
             m = int(input('Mass(Kg): '))
         if i == 'g':
-            g = int(input('Gravity(10 N Kg): '))
+            g = int(input('Gravity(N Kg): '))
         if i == 'h':
             h = int(input('Height(m): '))
         if i == 'v':
@@ -108,10 +130,10 @@ elif choice == 'F':
         l -= 1
         print('a')
     print('This all results in')
-    print(p)
-    print(k)
-    print(m)
-    print(g)
-    print(h)
-    print(v)
+    print(p,'potential gravity(J)')
+    print(k,'kinetic J')
+    print(m,'mass(Kg)')
+    print(g,'N Kg')
+    print(h,'m')
+    print(v,'m s-1')
     
